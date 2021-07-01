@@ -10,7 +10,7 @@ if __name__ == "__main__":
     bot=commands.Bot(command_prefix=commands.when_mentioned_or('ktb>','Ktb>'),case_insensitive=True,intents=intents)
     bot.remove_command('help')
 
-my_secret = os.environ['TAG']
+my_secret = os.environ.get('TAG')
 bot.load_extension('Cogs.greets')
 bot.load_extension('Cogs.general')
 bot.load_extension('Cogs.moderation')
